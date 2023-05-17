@@ -1,0 +1,286 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <!--tailwind cdn link-->
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap 4-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+
+   
+</head>
+<body>
+
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-xl"><i class="fa-solid fa-notes-medical"></i>Hospitex</span>
+          </a>
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a href="{% url 'home' %}" class="mr-5 hover:text-green-500 cursor-pointer">Home</a>
+            <a href="{% url 'service' %}" class="mr-5 hover:text-green-500 cursor-pointer">Services</a>
+            <a href="{% url 'Ourteam' %}" class="mr-5 hover:text-green-500 cursor-pointer">Our Team</a>
+            <a href="{% url 'About' %}" class="mr-5 hover:text-green-500 cursor-pointer">About</a>
+            <a href="{% url 'contact' %}" class="mr-5 hover:text-green-500 cursor-pointer">Contact</a>
+          </nav>
+          <button class=" ml-5 inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-400 rounded text-base mt-4 md:mt-0">Call:1800-206-358 </button>
+          <button class=" ml-5 inline-flex items-center bg-green-400 border-0 py-1 px-3 focus:outline-none hover:bg-yellow-400 rounded text-base mt-4 md:mt-0"><a href="#sign in">Login </button></a>
+         
+        </div>
+      </header>
+<div
+id="carouselMultiItemExample"
+class="carousel slide carousel-dark text-center"
+data-mdb-ride="carousel"
+>
+<!-- Controls -->
+<div class="d-flex justify-content-center mb-4">
+  <button
+    class="carousel-control-prev position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="prev" >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next position-relative"
+    type="button"
+    data-mdb-target="#carouselMultiItemExample"
+    data-mdb-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!-- Inner -->
+<div class="carousel-inner py-4">
+  <!-- Single item -->
+  <div class="carousel-item active">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/robotics.png" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Robotics</h5>
+              <p class="card-text">
+                Largest network of the world’s finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/cardic.png" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Cardiology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/pathology.png" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Pathology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/about girl.jpg" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Gynaecology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/neurs.png" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Neurology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/inter.jpg" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Urology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12">
+          <div class="card">
+            {% load static %}<img src="{% static "medical/media/pathology.png" %}" alt=""/>
+            <div class="card-body">
+              <h5 class="card-title">Pathology</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/185.webp"
+              class="card-img-top"
+              alt="Storm Clouds"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/186.webp"
+              class="card-img-top"
+              alt="Hot Air Balloons"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single item -->
+  <div class="carousel-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/187.webp"
+              class="card-img-top"
+              alt="Peaks Against the Starry Sky"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/188.webp"
+              class="card-img-top"
+              alt="Bridge Over Water"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+          <div class="card">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/standard/nature/189.webp"
+              class="card-img-top"
+              alt="Purbeck Heritage Coast"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk
+                of the card's content.
+              </p>
+              <a href="#!" class="btn btn-primary">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+
+
+    </body>
+    </html>
